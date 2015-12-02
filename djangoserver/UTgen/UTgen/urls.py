@@ -19,5 +19,5 @@ from UTgen import views
 
 urlpatterns = [
     # url(r'^UTgen/', include('UTgen.urls')),
-    url(r'^proov/', views.get_name, name='index'),
+    url(r'^proov/', views.current_datetime, name='proov'),
 ]

@@ -1,7 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-
+from django.http import HttpResponse
+import datetime
 from .forms import NameForm
+# from backend import generate_viide
+
+def generate_viide(Title, date, tuup, source='', author='', link='', version='', page_start='', page_end=''):
+    # Vorgumaterjal
+    if tuup == "Võrgumaterjal":
+        viide = Title + ", " + source + '. [' + tuup + '] [Tsiteeritud: ' + date + '] ' + link
+        return viide
+    elif tuup == 'PDF':
+        viide = Title + ", " + source + '. [' + tuup + '] [Laetud alla: ' + date + '] ' + link
+        return viide
+    elif tuup == 'raamat':
+        viide = author + ', ' + title, + ', ' + version + ', ' + source
+        return viide
+    elif tuup == 'artikkel':
+        # hetkel ainult uks autor
+        viide = author + ', ' + title + ', ' + source, + ', lk ' + page_start + '-' + page_end + ', ' + date
+        return viide
+    else:
+        return False
+
+
+def proov(sisend):
+    return sisend + 6
 
 
 def get_name(request):
@@ -22,4 +46,8 @@ def get_name(request):
 
     return render(request, 'vorm.html', {'form': form})
 
-# Create your views here.
+
+def current_datetime(request):
+    now = proov(5)
+    html = "<h1>Kell on praegu %s</h1>" %now
+    return HttpResponse(html)
