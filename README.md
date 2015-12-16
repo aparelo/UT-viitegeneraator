@@ -4,7 +4,11 @@ Pythoni projekt
 Programeerimise aine raames tehtav Pythoni projekt.
 
 Projekti eesmärgiks on luua veebirakendus, mis genereerib etteantud sisendite põhjal automaatselt viite, mis vastab TÜ vormistusnõuetele.
-Hetkel suudab rakendus printida välja lihtsa funktsiooni väärtuse.
+Rakendus töötab, aga kindalsti leidub veel mitmeid vigasid.
+
+Live versiooni saab näha <a href='http://utgen.herokuapp.com/'>siit.</a>
+
+Kohalikus arvutis käivitamine:</br>
 
 Käivitamiseks tuleb kõik failid alla laadida </br> 
 käsureal navigeerida <b>/Ut-viitegeneraator/djangoserver/UTgen</b> kausta. </br>
